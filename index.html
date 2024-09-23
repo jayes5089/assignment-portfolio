@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Jason's Portfolio</h1>
+    </header>
+    <section id="completed" class="dropdown">
+        <h2>Completed Projects</h2>
+        <div class="project-container">
+            <div class="project" style="background-image: url('proj1.png');">
+                <h3>Getting To Know Each Other</h3>
+            </div>
+            <div class="project" style="background-image: url('proj2.png');">
+                <h3>Dice Roller</h3>
+            </div>
+        </div>
+    </section>
+    <section id="in-progress" class="dropdown">
+        <h2>In Progress</h2>
+        <div class="project-container">
+            <p>Check Back Later!</p>
+        </div>
+    </section>
+    <section id="future-projects" class="dropdown">
+        <h2>Future Projects</h2>
+        <div class="project-container">
+            <p>Check Back Later!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Jason Yescas 2024</p>
+    </footer>
+
+    <script>
+        const dropdowns = document.querySelectorAll('.dropdown h2');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', function() {
+                this.nextElementSibling.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
